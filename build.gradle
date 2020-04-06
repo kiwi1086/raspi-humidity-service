@@ -10,10 +10,9 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
-    implementation 'io.quarkus:quarkus-resteasy'
-    implementation 'io.quarkus:quarkus-resteasy-jackson'
-    implementation 'io.quarkus:quarkus-smallrye-openapi'
+    //implementation 'io.quarkus:quarkus-resteasy'
     implementation 'io.quarkus:quarkus-smallrye-metrics'
+    implementation 'io.quarkus:quarkus-scheduler'
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
     implementation 'com.pi4j:pi4j-core:1.2'
