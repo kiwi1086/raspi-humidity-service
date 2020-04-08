@@ -56,7 +56,7 @@ public class DTH22 {
 
         Gpio.pinMode(PIN, Gpio.OUTPUT);
         Gpio.digitalWrite(PIN, Gpio.LOW);
-        Gpio.delayMicroseconds(800);
+        Gpio.delay(1);
 
         Gpio.digitalWrite(PIN, Gpio.HIGH);
         Gpio.pinMode(PIN, Gpio.INPUT);
@@ -95,6 +95,8 @@ public class DTH22 {
                 Integer.toBinaryString(dht22Data[2]),
                 Integer.toBinaryString(dht22Data[3]),
                 Integer.toBinaryString(dht22Data[4]));
+        log.info("{}", Integer.toBinaryString((dht22Data[0] + dht22Data[1] + dht22Data[2] + dht22Data[3] & 0xFF)));
+        log.info("{}", Integer.toBinaryString(dht22Data[4]));
 
         // check we read 40 bits (8bit x 5 ) + verify checksum in the last
         // byte
