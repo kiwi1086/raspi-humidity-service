@@ -56,7 +56,7 @@ public class DTH22 {
 
         Gpio.pinMode(PIN, Gpio.OUTPUT);
         Gpio.digitalWrite(PIN, Gpio.LOW);
-        Gpio.delay(10);
+        Gpio.delayMicroseconds(800);
 
         Gpio.digitalWrite(PIN, Gpio.HIGH);
         Gpio.pinMode(PIN, Gpio.INPUT);
