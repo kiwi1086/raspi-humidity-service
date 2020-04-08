@@ -88,14 +88,13 @@ public class DTH22 {
             }
         }
 
-        if (j >= 40) {
-            log.info("{} {} {} {} {}",
-                    Integer.toBinaryString(dht22Data[0]),
-                    Integer.toBinaryString(dht22Data[1]),
-                    Integer.toBinaryString(dht22Data[2]),
-                    Integer.toBinaryString(dht22Data[3]),
-                    Integer.toBinaryString(dht22Data[4]));
-        }
+        log.info("-> j <{}>", j);
+        log.info("{} {} {} {} {}",
+                Integer.toBinaryString(dht22Data[0]),
+                Integer.toBinaryString(dht22Data[1]),
+                Integer.toBinaryString(dht22Data[2]),
+                Integer.toBinaryString(dht22Data[3]),
+                Integer.toBinaryString(dht22Data[4]));
 
         // check we read 40 bits (8bit x 5 ) + verify checksum in the last
         // byte
@@ -115,7 +114,7 @@ public class DTH22 {
 
             temperature = c;
             humidity = h;
-            System.out.println("Humidity = " + h + " Temperature = " + c + "(" + f + "f)");
+            log.info("Humidity = " + h + " Temperature = " + c + "(" + f + "f)");
         } else {
             log.warn("Data not good, skip");
         }
