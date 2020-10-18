@@ -49,6 +49,13 @@ public class DTH22 {
         metricRegistry.register(humidityMetric, (Gauge<Float>) () -> humidity);
     }
 
+    public Float getTemperature() {
+        return temperature;
+    }
+
+    public Float getHumidity() {
+        return humidity;
+    }
 
     public void readOutTemperatureAndHumidity() {
         int j = 0;
