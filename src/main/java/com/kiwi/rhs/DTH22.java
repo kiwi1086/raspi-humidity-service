@@ -15,7 +15,7 @@ import org.eclipse.microprofile.metrics.MetricType;
 @Singleton
 public class DTH22 {
 
-    private static final int MAXTIMINGS = 85;
+    private static final int MAX_TIMINGS = 85;
     private static final int PIN = 7;
     private final int[] dht22Data = {0, 0, 0, 0, 0};
 
@@ -61,7 +61,7 @@ public class DTH22 {
         Gpio.digitalWrite(PIN, Gpio.HIGH);
         Gpio.pinMode(PIN, Gpio.INPUT);
 
-        for (int i = 0; i < MAXTIMINGS; i++) {
+        for (int i = 0; i < MAX_TIMINGS; i++) {
             int counter = 0;
             while (Gpio.digitalRead(PIN) == lastState) {
                 counter++;

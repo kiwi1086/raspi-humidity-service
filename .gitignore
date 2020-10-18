@@ -17,6 +17,9 @@
 # IDEA IntelliJ
 .idea/
 
+# Build output
+build/
+
 # Package Files #
 *.jar
 *.war
